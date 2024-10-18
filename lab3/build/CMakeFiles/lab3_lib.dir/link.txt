@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblab3_lib.a CMakeFiles/lab3_lib.dir/src/Square.cpp.o CMakeFiles/lab3_lib.dir/src/Rectangle.cpp.o CMakeFiles/lab3_lib.dir/src/Trapezoid.cpp.o CMakeFiles/lab3_lib.dir/src/Figure.cpp.o CMakeFiles/lab3_lib.dir/src/ShapeArray.cpp.o
+/usr/bin/ranlib liblab3_lib.a
