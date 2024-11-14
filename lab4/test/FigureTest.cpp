@@ -71,6 +71,66 @@ TEST(TrapezoidTest, VertexOutput) {
     EXPECT_EQ(ss.str(), expected_output);
 }
 
+// Тест увеличения вместимости массива
+TEST(ArrayTest, ReserveIncreasesCapacity) {
+    Array<Figure<int>> figures;
+    size_t initial_capacity = 5;
+    figures.reserve(initial_capacity);
+    
+    figures.push_back(std::make_shared<Square<int>>(Point<int>(0, 0), 2));
+    figures.push_back(std::make_shared<Rectangle<int>>(Point<int>(0, 0), 3, 4));
+    EXPECT_TRUE(figures.get_size() == 2);
+
+    // Убедимся, что массив работает с увеличенной вместимостью
+    for (int i = 2; i < initial_capacity; ++i) {
+        figures.push_back(std::make_shared<Square<int>>(Point<int>(i, i), 1));
+    }
+    EXPECT_TRUE(figures.get_size() == initial_capacity);
+}
+
+// Тест уменьшения размера массива до фактического количества элементов
+TEST(ArrayTest, ShrinkToFitReducesCapacity) {
+    Array<Figure<int>> figures;
+    figures.push_back(std::make_shared<Square<int>>(Point<int>(0, 0), 5));
+    figures.push_back(std::make_shared<Rectangle<int>>(Point<int>(0, 0), 2, 3));
+
+    figures.reserve(10);  // Увеличим вместимость, чтобы проверить уменьшение
+    EXPECT_TRUE(figures.get_size() == 2);  // Размер массива все еще 2
+
+    figures.shrink_to_fit();
+    EXPECT_TRUE(figures.get_size() == 2);
+}
+
+// Тест на пустые ячейки после удаления элемента
+TEST(ArrayTest, RemoveElementLeavesNullptr) {
+    Array<Figure<int>> figures;
+    figures.push_back(std::make_shared<Square<int>>(Point<int>(0, 0), 4));
+    figures.push_back(std::make_shared<Rectangle<int>>(Point<int>(0, 0), 3, 5));
+
+    figures.remove(0);  // Удалим первый элемент
+    EXPECT_TRUE(figures.get_size() == 1);
+
+    // Проверяем, что обращение к пустой ячейке не вызывает ошибку
+    EXPECT_NO_THROW(figures[0]);
+
+    double remaining_area = static_cast<double>(*figures[0]);
+    EXPECT_EQ(remaining_area, 15.0);
+}
+
+// Тест для проверки суммарной площади
+TEST(ArrayTest, TotalAreaCalculation) {
+    Array<Figure<int>> figures;
+    figures.push_back(std::make_shared<Square<int>>(Point<int>(0, 0), 4));  // Площадь = 16
+    figures.push_back(std::make_shared<Rectangle<int>>(Point<int>(0, 0), 3, 5));  // Площадь = 15
+
+    double total_area = figures.total_area();
+    EXPECT_EQ(total_area, 31.0);
+
+    figures.remove(0);  // Удалим квадрат
+    total_area = figures.total_area();
+    EXPECT_EQ(total_area, 15.0);  // Осталась только площадь прямоугольника
+}
+
 TEST(ArrayTest, PushBackAccessAndArea) {
     Array<Figure<int>> figures;
     figures.push_back(std::make_shared<Square<int>>(Point<int>(0, 0), 4));
