@@ -1,0 +1,50 @@
+
+Battle Report --------
+Attacker: Serega { x:62, y:21 } 
+Defender: Akakij { x:67, y:23 } 
+Result: Victory
+
+Battle Report --------
+Attacker: Akakij { x:67, y:23 } 
+Defender: Serega { x:62, y:21 } 
+Result: Victory
+
+Battle Report --------
+Attacker: Natalie { x:59, y:90 } 
+Defender: Arkadij { x:86, y:83 } 
+Result: Victory
+
+Battle Report --------
+Attacker: Natalie { x:59, y:90 } 
+Defender: Ivan { x:67, y:68 } 
+Result: Victory
+
+Battle Report --------
+Attacker: Natalie { x:59, y:90 } 
+Defender: Valera { x:92, y:86 } 
+Result: Victory
+
+Battle Report --------
+Attacker: Magomed { x:36, y:72 } 
+Defender: Petya { x:40, y:26 } 
+Result: Victory
+
+Battle Report --------
+Attacker: Viktor { x:93, y:15 } 
+Defender: Natalie { x:59, y:90 } 
+Result: Victory
+
+Battle Report --------
+Attacker: Viktor { x:93, y:15 } 
+Defender: Magomed { x:36, y:72 } 
+Result: Victory
+
+Battle Report --------
+Attacker: Natalie { x:59, y:90 } 
+Defender: Viktor { x:93, y:15 } 
+Result: Victory
+
+Battle Report --------
+Attacker: Magomed { x:36, y:72 } 
+Defender: Viktor { x:93, y:15 } 
+Result: Victory

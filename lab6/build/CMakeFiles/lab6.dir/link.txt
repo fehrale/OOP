@@ -1,0 +1,1 @@
+/usr/local/bin/c++  -Werror=maybe-uninitialized CMakeFiles/lab6.dir/main.cpp.o CMakeFiles/lab6.dir/src/dragon.cpp.o CMakeFiles/lab6.dir/src/elf.cpp.o CMakeFiles/lab6.dir/src/knight.cpp.o CMakeFiles/lab6.dir/src/npc.cpp.o -o lab6 
