@@ -1,70 +1,82 @@
+#include <iostream>
+#include <vector>
 #include "dragon.h"
-#include "factory.h"
-#include "npc.h"
 #include "elf.h"
+#include "factory.h"
+#include "observer.h"
 #include "knight.h"
+#include "visitor.h"
 
-void save(const set_t& array, const std::string& filename) {
-    std::ofstream fs(filename);
-    fs << array.size() << std::endl;
-    for (auto& n : array) n->save(fs);
-    fs.flush();
-    fs.close();
+void load(std::vector<std::shared_ptr<NPC>>& array, std::ifstream& file) {
+    while (file) {
+        auto tmp = factory(file);
+        if (tmp)
+            array.push_back(tmp);
+    }
 }
 
-set_t load(const std::string& filename) {
-    set_t result;
-    std::ifstream is(filename);
-    if (is.good() && is.is_open()) {
-        int count;
-        is >> count;
-        for (int i = 0; i < count; ++i) result.insert(Factory::CreateNPC(is));
-        is.close();
-    } else
-        std::cerr << "Error: " << std::strerror(errno) << std::endl;
-    return result;
-}
-
-set_t fight(const set_t& array, size_t distance) {
-    set_t dead_list;
-    for (const auto& attacker : array)
-        for (const auto& defender : array)
-            if ((attacker != defender) && (attacker->is_close(defender, distance))) {
-                bool success = defender->accept(attacker);
-                if (success) dead_list.insert(defender);
-            }
-    return dead_list;
-}
-
-std::ostream& operator<<(std::ostream& os, const set_t& array) {
-    for (auto& n : array) n->print();
-    return os;
+void save(std::vector<std::shared_ptr<NPC>>& array, std::ofstream& file) {
+    for (std::shared_ptr<NPC>& elem : array) {
+        elem->print(file);
+        file << std::endl;
+    }
 }
 
 int main() {
-    set_t array;
-    std::vector<std::string> names = {"Arkadij", "Viktor", "Valera", "Serega", "Natalie", "Petya", "Magomed", "Ivan", "George", "Akakij"};
-    std::cout << "Generating ..." << std::endl;
-    for (size_t i = 0; i < 10; ++i) array.insert(Factory::CreateNPC(NpcType(std::rand() % 3 + 1), names[i], std::rand() % 100, std::rand() % 100));
-    std::cout << "Saving ..." << std::endl;
+    ConsoleObserver cobs;
+    std::ofstream filelog("log.txt");
+    FileObserver fobs(filelog);
 
-    save(array, "npc.txt");
+    std::vector<std::shared_ptr<NPC>> persons;
 
-    std::cout << "Loading ..." << std::endl;
-    array = load("npc.txt");
+    std::string query;
+    do {
+        std::cin >> query;
+        if (query == "load") {
+            std::ifstream file_for_load;
+            std::string filename;
+            std::cin >> filename;
+            file_for_load.open(filename);
+            load(persons, file_for_load);
+        } else if (query == "save") {
+            std::ofstream file_for_save;
+            std::string filename;
+            std::cin >> filename;
+            file_for_save.open(filename);
+            save(persons, file_for_save);
+        } else if (query == "add") {
+            auto new_npc = factory(std::cin);
+            if (new_npc)
+                persons.push_back(new_npc);
+        } else if (query == "show") {
+            for (auto& elem : persons) {
+                elem->print(std::cout);
+                std::cout << std::endl;
+            }
+        }
+    } while (query != "fight");
 
-    std::cout << "Fighting ..." << std::endl << array;
-
-    for (size_t distance = 20; (distance <= 100) && !array.empty(); distance += 10) {
-        auto dead_list = fight(array, distance);
-        for (auto& d : dead_list) array.erase(d);
-        std::cout << "Fight stats ----------" << std::endl
-                  << "distance: " << distance << std::endl
-                  << "killed: " << dead_list.size() << std::endl
-                  << std::endl;
+    for (auto& elem : persons) {
+        elem->attach(&cobs);
+        elem->attach(&fobs);
     }
+    std::cout << "Enter a distance" << std::endl;
 
-    std::cout << "Survivors: " << array;
+    int distance;
+    std::cin >> distance;
 
-    return 0;
+    FightVisitor fightVisitor;
+    for (auto& attacker : persons) {
+        if (!attacker->is_alive()) continue;
+        for (auto& target : persons) {
+            if (attacker != target && target->is_alive()) {
+                bool win = attacker->is_close(*target, distance);
+                if (win) {
+                    target->set_alive(false);
+                    target->notify(attacker.get(), win);
+                    break;
+                }
+            }
+        }
+    }
 }

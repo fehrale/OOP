@@ -10,8 +10,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/workspaces/OOP1/lab6/src/dragon.cpp" "CMakeFiles/tests.dir/src/dragon.cpp.o" "gcc" "CMakeFiles/tests.dir/src/dragon.cpp.o.d"
   "/workspaces/OOP1/lab6/src/elf.cpp" "CMakeFiles/tests.dir/src/elf.cpp.o" "gcc" "CMakeFiles/tests.dir/src/elf.cpp.o.d"
+  "/workspaces/OOP1/lab6/src/factory.cpp" "CMakeFiles/tests.dir/src/factory.cpp.o" "gcc" "CMakeFiles/tests.dir/src/factory.cpp.o.d"
   "/workspaces/OOP1/lab6/src/knight.cpp" "CMakeFiles/tests.dir/src/knight.cpp.o" "gcc" "CMakeFiles/tests.dir/src/knight.cpp.o.d"
   "/workspaces/OOP1/lab6/src/npc.cpp" "CMakeFiles/tests.dir/src/npc.cpp.o" "gcc" "CMakeFiles/tests.dir/src/npc.cpp.o.d"
+  "/workspaces/OOP1/lab6/src/observer.cpp" "CMakeFiles/tests.dir/src/observer.cpp.o" "gcc" "CMakeFiles/tests.dir/src/observer.cpp.o.d"
   "/workspaces/OOP1/lab6/test/labTests.cpp" "CMakeFiles/tests.dir/test/labTests.cpp.o" "gcc" "CMakeFiles/tests.dir/test/labTests.cpp.o.d"
   )
 

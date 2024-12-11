@@ -1,27 +1,33 @@
 #include "elf.h"
+#include <algorithm>
+#include "dragon.h"
+#include "knight.h"
+#include "visitor.h"
 
-Elf::Elf(const std::string& name, int x, int y) : NPC(ElfType, name, x, y) {}
-Elf::Elf(std::istream& is) : NPC(ElfType, is) {}
+Elf::Elf(const int& _x, const int& _y, const std::string& _name) {
+    x = _x;
+    y = _y;
+    name = _name;
+    alive = true;
+}
 
-bool Elf::accept(const std::shared_ptr<NPC>& attacker) const {
-    // Эльф убивает только странствующих рыцарей
-    if (attacker->get_type() == NpcType::KnightType) {
-        attacker->fight_notify(std::const_pointer_cast<NPC>(shared_from_this()), true);
-        return true;
+void Elf::print(std::ostream& out) {
+    out << *this;
+}
+
+void Elf::accept(NPC* attacker, const int& distance) {
+    if (alive && dynamic_cast<Dragon*>(attacker)) {
+        bool win = is_close(*attacker, distance);
+        if (win)
+            alive = false;
+        notify(attacker, win);
     }
-    return false;
 }
 
-void Elf::print() {
-    std::cout << *this;
+std::ostream& operator<<(std::ostream& out, const Elf& other) {
+    return out << "Elf " << other.name << " {" << other.x << ", " << other.y << '}';
 }
 
-void Elf::save(std::ostream& os) {
-    os << ElfType << std::endl;
-    NPC::save(os);
-}
-
-std::ostream& operator<<(std::ostream& os, Elf& Elf) {
-    os << "Elf " << *static_cast<NPC*>(&Elf) << std::endl;
-    return os;
+void Elf::accept(const Visitor& visitor, NPC* attacker, const int& distance) {
+    visitor.visit(this, attacker, distance);
 }

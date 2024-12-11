@@ -1,16 +1,15 @@
 #pragma once
 #include "npc.h"
-#include "visitor.h"
 
-class Elf final : public NPC {
-public:
-    Elf(const std::string&, int, int);
-    Elf(std::istream&);
+class Elf : public NPC {
+   public:
+    Elf(const int&, const int&, const std::string&);
 
-    virtual bool accept(const std::shared_ptr<NPC>&) const override;
+    void print(std::ostream&) override;
 
-    void print() override;
-    void save(std::ostream&) override;
+    void accept(NPC*, const int&) override;
 
-    friend std::ostream& operator<<(std::ostream&, Elf&);
+    friend std::ostream& operator<<(std::ostream&, const Elf&);
+
+    void accept(const Visitor& visitor, NPC* attacker, const int& distance) override;
 };

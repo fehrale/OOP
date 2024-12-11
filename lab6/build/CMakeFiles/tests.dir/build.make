@@ -111,10 +111,24 @@ CMakeFiles/tests.dir/src/elf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/src/elf.cpp.s"
 	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/OOP1/lab6/src/elf.cpp -o CMakeFiles/tests.dir/src/elf.cpp.s
 
+CMakeFiles/tests.dir/src/factory.cpp.o: CMakeFiles/tests.dir/flags.make
+CMakeFiles/tests.dir/src/factory.cpp.o: /workspaces/OOP1/lab6/src/factory.cpp
+CMakeFiles/tests.dir/src/factory.cpp.o: CMakeFiles/tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OOP1/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tests.dir/src/factory.cpp.o"
+	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tests.dir/src/factory.cpp.o -MF CMakeFiles/tests.dir/src/factory.cpp.o.d -o CMakeFiles/tests.dir/src/factory.cpp.o -c /workspaces/OOP1/lab6/src/factory.cpp
+
+CMakeFiles/tests.dir/src/factory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/src/factory.cpp.i"
+	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/OOP1/lab6/src/factory.cpp > CMakeFiles/tests.dir/src/factory.cpp.i
+
+CMakeFiles/tests.dir/src/factory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/src/factory.cpp.s"
+	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/OOP1/lab6/src/factory.cpp -o CMakeFiles/tests.dir/src/factory.cpp.s
+
 CMakeFiles/tests.dir/src/knight.cpp.o: CMakeFiles/tests.dir/flags.make
 CMakeFiles/tests.dir/src/knight.cpp.o: /workspaces/OOP1/lab6/src/knight.cpp
 CMakeFiles/tests.dir/src/knight.cpp.o: CMakeFiles/tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OOP1/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tests.dir/src/knight.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OOP1/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tests.dir/src/knight.cpp.o"
 	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tests.dir/src/knight.cpp.o -MF CMakeFiles/tests.dir/src/knight.cpp.o.d -o CMakeFiles/tests.dir/src/knight.cpp.o -c /workspaces/OOP1/lab6/src/knight.cpp
 
 CMakeFiles/tests.dir/src/knight.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/tests.dir/src/knight.cpp.s: cmake_force
 CMakeFiles/tests.dir/src/npc.cpp.o: CMakeFiles/tests.dir/flags.make
 CMakeFiles/tests.dir/src/npc.cpp.o: /workspaces/OOP1/lab6/src/npc.cpp
 CMakeFiles/tests.dir/src/npc.cpp.o: CMakeFiles/tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OOP1/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tests.dir/src/npc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OOP1/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tests.dir/src/npc.cpp.o"
 	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tests.dir/src/npc.cpp.o -MF CMakeFiles/tests.dir/src/npc.cpp.o.d -o CMakeFiles/tests.dir/src/npc.cpp.o -c /workspaces/OOP1/lab6/src/npc.cpp
 
 CMakeFiles/tests.dir/src/npc.cpp.i: cmake_force
@@ -139,13 +153,29 @@ CMakeFiles/tests.dir/src/npc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/src/npc.cpp.s"
 	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/OOP1/lab6/src/npc.cpp -o CMakeFiles/tests.dir/src/npc.cpp.s
 
+CMakeFiles/tests.dir/src/observer.cpp.o: CMakeFiles/tests.dir/flags.make
+CMakeFiles/tests.dir/src/observer.cpp.o: /workspaces/OOP1/lab6/src/observer.cpp
+CMakeFiles/tests.dir/src/observer.cpp.o: CMakeFiles/tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/OOP1/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tests.dir/src/observer.cpp.o"
+	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tests.dir/src/observer.cpp.o -MF CMakeFiles/tests.dir/src/observer.cpp.o.d -o CMakeFiles/tests.dir/src/observer.cpp.o -c /workspaces/OOP1/lab6/src/observer.cpp
+
+CMakeFiles/tests.dir/src/observer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/src/observer.cpp.i"
+	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/OOP1/lab6/src/observer.cpp > CMakeFiles/tests.dir/src/observer.cpp.i
+
+CMakeFiles/tests.dir/src/observer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/src/observer.cpp.s"
+	/usr/local/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/OOP1/lab6/src/observer.cpp -o CMakeFiles/tests.dir/src/observer.cpp.s
+
 # Object files for target tests
 tests_OBJECTS = \
 "CMakeFiles/tests.dir/test/labTests.cpp.o" \
 "CMakeFiles/tests.dir/src/dragon.cpp.o" \
 "CMakeFiles/tests.dir/src/elf.cpp.o" \
+"CMakeFiles/tests.dir/src/factory.cpp.o" \
 "CMakeFiles/tests.dir/src/knight.cpp.o" \
-"CMakeFiles/tests.dir/src/npc.cpp.o"
+"CMakeFiles/tests.dir/src/npc.cpp.o" \
+"CMakeFiles/tests.dir/src/observer.cpp.o"
 
 # External object files for target tests
 tests_EXTERNAL_OBJECTS =
@@ -153,14 +183,16 @@ tests_EXTERNAL_OBJECTS =
 tests: CMakeFiles/tests.dir/test/labTests.cpp.o
 tests: CMakeFiles/tests.dir/src/dragon.cpp.o
 tests: CMakeFiles/tests.dir/src/elf.cpp.o
+tests: CMakeFiles/tests.dir/src/factory.cpp.o
 tests: CMakeFiles/tests.dir/src/knight.cpp.o
 tests: CMakeFiles/tests.dir/src/npc.cpp.o
+tests: CMakeFiles/tests.dir/src/observer.cpp.o
 tests: CMakeFiles/tests.dir/build.make
 tests: lib/libgtest.a
 tests: lib/libgtest_main.a
 tests: lib/libgtest.a
 tests: CMakeFiles/tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/OOP1/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/OOP1/lab6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

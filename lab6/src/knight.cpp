@@ -1,27 +1,33 @@
 #include "knight.h"
+#include <algorithm>
+#include "dragon.h"
+#include "elf.h"
+#include "visitor.h"
 
-Knight::Knight(const std::string& name, int x, int y) : NPC(NpcType::KnightType, name, x, y) {}
-Knight::Knight(std::istream& is) : NPC(NpcType::KnightType, is) {}
+Wandering_Knight::Wandering_Knight(const int& _x, const int& _y, const std::string& _name) {
+    x = _x;
+    y = _y;
+    name = _name;
+    alive = true;
+}
 
-bool Knight::accept(const std::shared_ptr<NPC>& attacker) const {
-    // Рыцарь убивает только драконов
-    if (attacker->get_type() == NpcType::DragonType) {
-        attacker->fight_notify(std::const_pointer_cast<NPC>(shared_from_this()), true);
-        return true;
+void Wandering_Knight::print(std::ostream& out) {
+    out << *this;
+}
+
+void Wandering_Knight::accept(NPC* attacker, const int& distance) {
+    if (alive && (dynamic_cast<Dragon*>(attacker) || dynamic_cast<Elf*>(attacker))) {
+        bool win = is_close(*attacker, distance);
+        if (win)
+            alive = false;
+        notify(attacker, win);
     }
-    return false;
 }
 
-void Knight::print() {
-    std::cout << *this;
+std::ostream& operator<<(std::ostream& out, const Wandering_Knight& other) {
+    return out << "Wandering Knight " << other.name << " {" << other.x << ", " << other.y << '}';
 }
 
-void Knight::save(std::ostream& os) {
-    os << NpcType::KnightType << std::endl;
-    NPC::save(os);
-}
-
-std::ostream& operator<<(std::ostream& os, Knight& knight) {
-    os << "Knight " << *static_cast<NPC*>(&knight) << std::endl;
-    return os;
+void Wandering_Knight::accept(const Visitor& visitor, NPC* attacker, const int& distance) {
+    visitor.visit(this, attacker, distance);
 }

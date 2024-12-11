@@ -1,32 +1,30 @@
 #include "npc.h"
+#include <algorithm>
 
-NPC::NPC(NpcType t, const std::string& _name, int _x, int _y) : type(t), name(_name), x(_x), y(_y) {}
-NPC::NPC(NpcType t, std::istream& is) : type(t) {
-    is >> name;
-    is >> x;
-    is >> y;
+bool NPC::is_close(const NPC& other, const int& distance) const noexcept {
+    return (x - other.x) * (x - other.x) + (y - other.y) * (y - other.y) <= distance * distance;
 }
 
-void NPC::subscribe(const std::shared_ptr<Observer>& obs) {
-    observers.push_back(obs);
+void NPC::notify(NPC* attacker, bool win) {
+    if (win) {
+        for (auto& elem : NPC::observers) {
+            elem->update(this, attacker, win);
+        }
+    }
 }
 
-void NPC::fight_notify(const std::shared_ptr<NPC> defender, bool win) const {
-    for (auto& o : observers) o->on_fight(std::const_pointer_cast<NPC>(shared_from_this()), defender, win);
+std::ostream& operator<<(std::ostream& out, const NPC& other) {
+    return out << "$NPC {" << other.x << ", " << other.y << '}';
 }
 
-bool NPC::is_close(const std::shared_ptr<NPC>& other, size_t distance) const {
-    return std::pow(x - other->x, 2) + std::pow(y - other->y, 2) <= std::pow(distance, 2);
+void NPC::attach(Observer* observer) {
+    observers.push_back(observer);
+}
+void NPC::detach(Observer* observer) {
+    observers.erase(
+        std::find(NPC::observers.begin(), NPC::observers.end(), observer));
 }
 
-void NPC::save(std::ostream& os) {
-    os << name << std::endl;
-    os << x << std::endl;
-    os << y << std::endl;
+bool NPC::is_alive() const noexcept {
+    return alive;
 }
-
-std::ostream& operator<<(std::ostream& os, NPC& npc) {
-    os << npc.name << " { x:" << npc.x << ", y:" << npc.y << " } ";
-    return os;
-}
-

@@ -1,6 +1,6 @@
-CMakeFiles/lab6.dir/src/dragon.cpp.o: \
- /workspaces/OOP1/lab6/src/dragon.cpp /usr/include/stdc-predef.h \
- /workspaces/OOP1/lab6/include/dragon.h \
+CMakeFiles/lab6.dir/src/factory.cpp.o: \
+ /workspaces/OOP1/lab6/src/factory.cpp /usr/include/stdc-predef.h \
+ /workspaces/OOP1/lab6/include/factory.h \
  /workspaces/OOP1/lab6/include/npc.h /usr/local/include/c++/14.2.0/list \
  /usr/local/include/c++/14.2.0/bits/requires_hosted.h \
  /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/c++config.h \
@@ -233,14 +233,6 @@ CMakeFiles/lab6.dir/src/dragon.cpp.o: \
  /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/c++io.h \
  /usr/local/include/c++/14.2.0/bits/fstream.tcc \
  /usr/local/include/c++/14.2.0/iostream \
- /usr/local/include/c++/14.2.0/algorithm \
- /usr/local/include/c++/14.2.0/bits/stl_algo.h \
- /usr/local/include/c++/14.2.0/bits/algorithmfwd.h \
- /usr/local/include/c++/14.2.0/bits/stl_heap.h \
- /usr/local/include/c++/14.2.0/bits/uniform_int_dist.h \
- /usr/local/include/c++/14.2.0/bits/ranges_algo.h \
- /usr/local/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
+ /workspaces/OOP1/lab6/include/dragon.h \
  /workspaces/OOP1/lab6/include/elf.h \
- /workspaces/OOP1/lab6/include/knight.h \
- /workspaces/OOP1/lab6/include/visitor.h \
- /workspaces/OOP1/lab6/include/factory.h
+ /workspaces/OOP1/lab6/include/knight.h

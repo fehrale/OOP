@@ -317,6 +317,33 @@ src/elf.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/elf.cpp.s
 .PHONY : src/elf.cpp.s
 
+src/factory.o: src/factory.cpp.o
+.PHONY : src/factory.o
+
+# target to build an object file
+src/factory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/src/factory.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/factory.cpp.o
+.PHONY : src/factory.cpp.o
+
+src/factory.i: src/factory.cpp.i
+.PHONY : src/factory.i
+
+# target to preprocess a source file
+src/factory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/src/factory.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/factory.cpp.i
+.PHONY : src/factory.cpp.i
+
+src/factory.s: src/factory.cpp.s
+.PHONY : src/factory.s
+
+# target to generate assembly for a file
+src/factory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/src/factory.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/factory.cpp.s
+.PHONY : src/factory.cpp.s
+
 src/knight.o: src/knight.cpp.o
 .PHONY : src/knight.o
 
@@ -371,6 +398,33 @@ src/npc.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/npc.cpp.s
 .PHONY : src/npc.cpp.s
 
+src/observer.o: src/observer.cpp.o
+.PHONY : src/observer.o
+
+# target to build an object file
+src/observer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/src/observer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/observer.cpp.o
+.PHONY : src/observer.cpp.o
+
+src/observer.i: src/observer.cpp.i
+.PHONY : src/observer.i
+
+# target to preprocess a source file
+src/observer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/src/observer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/observer.cpp.i
+.PHONY : src/observer.cpp.i
+
+src/observer.s: src/observer.cpp.s
+.PHONY : src/observer.s
+
+# target to generate assembly for a file
+src/observer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6.dir/build.make CMakeFiles/lab6.dir/src/observer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/observer.cpp.s
+.PHONY : src/observer.cpp.s
+
 test/labTests.o: test/labTests.cpp.o
 .PHONY : test/labTests.o
 
@@ -422,12 +476,18 @@ help:
 	@echo "... src/elf.o"
 	@echo "... src/elf.i"
 	@echo "... src/elf.s"
+	@echo "... src/factory.o"
+	@echo "... src/factory.i"
+	@echo "... src/factory.s"
 	@echo "... src/knight.o"
 	@echo "... src/knight.i"
 	@echo "... src/knight.s"
 	@echo "... src/npc.o"
 	@echo "... src/npc.i"
 	@echo "... src/npc.s"
+	@echo "... src/observer.o"
+	@echo "... src/observer.i"
+	@echo "... src/observer.s"
 	@echo "... test/labTests.o"
 	@echo "... test/labTests.i"
 	@echo "... test/labTests.s"

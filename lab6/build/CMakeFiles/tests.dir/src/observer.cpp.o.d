@@ -1,7 +1,7 @@
-CMakeFiles/lab6.dir/src/dragon.cpp.o: \
- /workspaces/OOP1/lab6/src/dragon.cpp /usr/include/stdc-predef.h \
- /workspaces/OOP1/lab6/include/dragon.h \
- /workspaces/OOP1/lab6/include/npc.h /usr/local/include/c++/14.2.0/list \
+CMakeFiles/tests.dir/src/observer.cpp.o: \
+ /workspaces/OOP1/lab6/src/observer.cpp /usr/include/stdc-predef.h \
+ /workspaces/OOP1/lab6/include/observer.h \
+ /usr/local/include/c++/14.2.0/fstream \
  /usr/local/include/c++/14.2.0/bits/requires_hosted.h \
  /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/c++config.h \
  /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/os_defines.h \
@@ -14,83 +14,18 @@ CMakeFiles/lab6.dir/src/dragon.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/cpu_defines.h \
  /usr/local/include/c++/14.2.0/pstl/pstl_config.h \
- /usr/local/include/c++/14.2.0/bits/stl_algobase.h \
- /usr/local/include/c++/14.2.0/bits/functexcept.h \
- /usr/local/include/c++/14.2.0/bits/exception_defines.h \
- /usr/local/include/c++/14.2.0/bits/cpp_type_traits.h \
- /usr/local/include/c++/14.2.0/ext/type_traits.h \
- /usr/local/include/c++/14.2.0/ext/numeric_traits.h \
- /usr/local/include/c++/14.2.0/bits/stl_pair.h \
- /usr/local/include/c++/14.2.0/type_traits \
- /usr/local/include/c++/14.2.0/bits/version.h \
- /usr/local/include/c++/14.2.0/bits/move.h \
- /usr/local/include/c++/14.2.0/bits/utility.h \
- /usr/local/include/c++/14.2.0/compare \
- /usr/local/include/c++/14.2.0/concepts \
- /usr/local/include/c++/14.2.0/bits/stl_iterator_base_types.h \
- /usr/local/include/c++/14.2.0/bits/iterator_concepts.h \
- /usr/local/include/c++/14.2.0/bits/ptr_traits.h \
- /usr/local/include/c++/14.2.0/bits/ranges_cmp.h \
- /usr/local/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
- /usr/local/include/c++/14.2.0/bits/concept_check.h \
- /usr/local/include/c++/14.2.0/debug/assertions.h \
- /usr/local/include/c++/14.2.0/bits/stl_iterator.h \
- /usr/local/include/c++/14.2.0/new \
- /usr/local/include/c++/14.2.0/bits/exception.h \
- /usr/local/include/c++/14.2.0/bits/stl_construct.h \
- /usr/local/include/c++/14.2.0/debug/debug.h \
- /usr/local/include/c++/14.2.0/bits/predefined_ops.h \
- /usr/local/include/c++/14.2.0/bit \
- /usr/local/include/c++/14.2.0/bits/allocator.h \
- /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/c++allocator.h \
- /usr/local/include/c++/14.2.0/bits/new_allocator.h \
- /usr/local/include/c++/14.2.0/bits/memoryfwd.h \
- /usr/local/include/c++/14.2.0/bits/range_access.h \
- /usr/local/include/c++/14.2.0/initializer_list \
- /usr/local/include/c++/14.2.0/bits/stl_list.h \
- /usr/local/include/c++/14.2.0/ext/alloc_traits.h \
- /usr/local/include/c++/14.2.0/bits/alloc_traits.h \
- /usr/local/include/c++/14.2.0/bits/allocated_ptr.h \
- /usr/local/include/c++/14.2.0/ext/aligned_buffer.h \
- /usr/local/include/c++/14.2.0/bits/list.tcc \
- /usr/local/include/c++/14.2.0/bits/memory_resource.h \
- /usr/local/include/c++/14.2.0/cstddef \
- /usr/local/lib/gcc/x86_64-linux-gnu/14.2.0/include/stddef.h \
- /usr/local/include/c++/14.2.0/bits/uses_allocator.h \
- /usr/local/include/c++/14.2.0/bits/uses_allocator_args.h \
- /usr/local/include/c++/14.2.0/tuple \
- /usr/local/include/c++/14.2.0/bits/invoke.h \
- /usr/local/include/c++/14.2.0/bits/ranges_util.h \
- /usr/local/include/c++/14.2.0/bits/ranges_base.h \
- /usr/local/include/c++/14.2.0/bits/max_size_type.h \
- /usr/local/include/c++/14.2.0/numbers \
- /usr/local/include/c++/14.2.0/memory \
- /usr/local/include/c++/14.2.0/bits/stl_tempbuf.h \
- /usr/local/include/c++/14.2.0/bits/stl_uninitialized.h \
- /usr/local/include/c++/14.2.0/bits/stl_raw_storage_iter.h \
- /usr/local/include/c++/14.2.0/bits/align.h \
- /usr/local/lib/gcc/x86_64-linux-gnu/14.2.0/include/stdint.h \
- /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/local/include/c++/14.2.0/bits/unique_ptr.h \
- /usr/local/include/c++/14.2.0/bits/stl_function.h \
- /usr/local/include/c++/14.2.0/backward/binders.h \
- /usr/local/include/c++/14.2.0/bits/functional_hash.h \
- /usr/local/include/c++/14.2.0/bits/hash_bytes.h \
- /usr/local/include/c++/14.2.0/ostream /usr/local/include/c++/14.2.0/ios \
+ /usr/local/include/c++/14.2.0/istream /usr/local/include/c++/14.2.0/ios \
  /usr/local/include/c++/14.2.0/iosfwd \
  /usr/local/include/c++/14.2.0/bits/stringfwd.h \
+ /usr/local/include/c++/14.2.0/bits/memoryfwd.h \
  /usr/local/include/c++/14.2.0/bits/postypes.h \
  /usr/local/include/c++/14.2.0/cwchar /usr/include/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+ /usr/local/lib/gcc/x86_64-linux-gnu/14.2.0/include/stddef.h \
  /usr/local/lib/gcc/x86_64-linux-gnu/14.2.0/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
@@ -99,16 +34,36 @@ CMakeFiles/lab6.dir/src/dragon.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/local/include/c++/14.2.0/exception \
+ /usr/local/include/c++/14.2.0/bits/exception.h \
+ /usr/local/include/c++/14.2.0/bits/version.h \
  /usr/local/include/c++/14.2.0/bits/exception_ptr.h \
+ /usr/local/include/c++/14.2.0/bits/exception_defines.h \
  /usr/local/include/c++/14.2.0/bits/cxxabi_init_exception.h \
  /usr/local/include/c++/14.2.0/typeinfo \
+ /usr/local/include/c++/14.2.0/bits/hash_bytes.h \
+ /usr/local/include/c++/14.2.0/new \
+ /usr/local/include/c++/14.2.0/bits/move.h \
+ /usr/local/include/c++/14.2.0/type_traits \
  /usr/local/include/c++/14.2.0/bits/nested_exception.h \
  /usr/local/include/c++/14.2.0/bits/char_traits.h \
+ /usr/local/include/c++/14.2.0/compare \
+ /usr/local/include/c++/14.2.0/concepts \
+ /usr/local/include/c++/14.2.0/bits/stl_construct.h \
+ /usr/local/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+ /usr/local/include/c++/14.2.0/bits/iterator_concepts.h \
+ /usr/local/include/c++/14.2.0/bits/ptr_traits.h \
+ /usr/local/include/c++/14.2.0/bits/ranges_cmp.h \
+ /usr/local/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
+ /usr/local/include/c++/14.2.0/bits/concept_check.h \
+ /usr/local/include/c++/14.2.0/debug/assertions.h \
  /usr/local/include/c++/14.2.0/bits/localefwd.h \
  /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/c++locale.h \
  /usr/local/include/c++/14.2.0/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h \
  /usr/local/include/c++/14.2.0/cctype /usr/include/ctype.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/time64.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endianness.h \
  /usr/local/include/c++/14.2.0/bits/ios_base.h \
@@ -143,17 +98,43 @@ CMakeFiles/lab6.dir/src/dragon.cpp.o: \
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
  /usr/local/include/c++/14.2.0/bits/locale_classes.h \
  /usr/local/include/c++/14.2.0/string \
+ /usr/local/include/c++/14.2.0/bits/allocator.h \
+ /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/c++allocator.h \
+ /usr/local/include/c++/14.2.0/bits/new_allocator.h \
+ /usr/local/include/c++/14.2.0/bits/functexcept.h \
+ /usr/local/include/c++/14.2.0/bits/cpp_type_traits.h \
  /usr/local/include/c++/14.2.0/bits/ostream_insert.h \
  /usr/local/include/c++/14.2.0/bits/cxxabi_forced.h \
+ /usr/local/include/c++/14.2.0/bits/stl_iterator.h \
+ /usr/local/include/c++/14.2.0/ext/type_traits.h \
+ /usr/local/include/c++/14.2.0/bits/stl_function.h \
+ /usr/local/include/c++/14.2.0/backward/binders.h \
+ /usr/local/include/c++/14.2.0/ext/numeric_traits.h \
+ /usr/local/include/c++/14.2.0/bits/stl_algobase.h \
+ /usr/local/include/c++/14.2.0/bits/stl_pair.h \
+ /usr/local/include/c++/14.2.0/bits/utility.h \
+ /usr/local/include/c++/14.2.0/debug/debug.h \
+ /usr/local/include/c++/14.2.0/bits/predefined_ops.h \
+ /usr/local/include/c++/14.2.0/bit \
  /usr/local/include/c++/14.2.0/bits/refwrap.h \
+ /usr/local/include/c++/14.2.0/bits/invoke.h \
+ /usr/local/include/c++/14.2.0/bits/range_access.h \
+ /usr/local/include/c++/14.2.0/initializer_list \
  /usr/local/include/c++/14.2.0/bits/basic_string.h \
+ /usr/local/include/c++/14.2.0/ext/alloc_traits.h \
+ /usr/local/include/c++/14.2.0/bits/alloc_traits.h \
  /usr/local/include/c++/14.2.0/string_view \
+ /usr/local/include/c++/14.2.0/bits/functional_hash.h \
+ /usr/local/include/c++/14.2.0/bits/ranges_base.h \
+ /usr/local/include/c++/14.2.0/bits/max_size_type.h \
+ /usr/local/include/c++/14.2.0/numbers \
  /usr/local/include/c++/14.2.0/bits/string_view.tcc \
  /usr/local/include/c++/14.2.0/ext/string_conversions.h \
  /usr/local/include/c++/14.2.0/cstdlib /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
  /usr/include/x86_64-linux-gnu/sys/select.h \
@@ -174,6 +155,12 @@ CMakeFiles/lab6.dir/src/dragon.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/local/include/c++/14.2.0/bits/charconv.h \
  /usr/local/include/c++/14.2.0/bits/basic_string.tcc \
+ /usr/local/include/c++/14.2.0/bits/memory_resource.h \
+ /usr/local/include/c++/14.2.0/cstddef \
+ /usr/local/include/c++/14.2.0/bits/uses_allocator.h \
+ /usr/local/include/c++/14.2.0/bits/uses_allocator_args.h \
+ /usr/local/include/c++/14.2.0/tuple \
+ /usr/local/include/c++/14.2.0/bits/ranges_util.h \
  /usr/local/include/c++/14.2.0/bits/locale_classes.tcc \
  /usr/local/include/c++/14.2.0/system_error \
  /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/error_constants.h \
@@ -189,9 +176,26 @@ CMakeFiles/lab6.dir/src/dragon.cpp.o: \
  /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/ctype_inline.h \
  /usr/local/include/c++/14.2.0/bits/locale_facets.tcc \
  /usr/local/include/c++/14.2.0/bits/basic_ios.tcc \
+ /usr/local/include/c++/14.2.0/ostream \
  /usr/local/include/c++/14.2.0/bits/ostream.tcc \
+ /usr/local/include/c++/14.2.0/bits/istream.tcc \
+ /usr/local/include/c++/14.2.0/bits/codecvt.h \
+ /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/basic_file.h \
+ /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/c++io.h \
+ /usr/local/include/c++/14.2.0/bits/fstream.tcc \
+ /usr/local/include/c++/14.2.0/iostream \
+ /usr/local/include/c++/14.2.0/memory \
+ /usr/local/include/c++/14.2.0/bits/stl_tempbuf.h \
+ /usr/local/include/c++/14.2.0/bits/stl_uninitialized.h \
+ /usr/local/include/c++/14.2.0/bits/stl_raw_storage_iter.h \
+ /usr/local/include/c++/14.2.0/bits/align.h \
+ /usr/local/lib/gcc/x86_64-linux-gnu/14.2.0/include/stdint.h \
+ /usr/include/stdint.h /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/local/include/c++/14.2.0/bits/unique_ptr.h \
  /usr/local/include/c++/14.2.0/bits/shared_ptr.h \
  /usr/local/include/c++/14.2.0/bits/shared_ptr_base.h \
+ /usr/local/include/c++/14.2.0/bits/allocated_ptr.h \
+ /usr/local/include/c++/14.2.0/ext/aligned_buffer.h \
  /usr/local/include/c++/14.2.0/ext/concurrence.h \
  /usr/local/include/c++/14.2.0/bits/shared_ptr_atomic.h \
  /usr/local/include/c++/14.2.0/bits/atomic_base.h \
@@ -224,23 +228,6 @@ CMakeFiles/lab6.dir/src/dragon.cpp.o: \
  /usr/local/include/c++/14.2.0/bits/ranges_algobase.h \
  /usr/local/include/c++/14.2.0/pstl/glue_memory_defs.h \
  /usr/local/include/c++/14.2.0/pstl/execution_defs.h \
- /workspaces/OOP1/lab6/include/observer.h \
- /usr/local/include/c++/14.2.0/fstream \
- /usr/local/include/c++/14.2.0/istream \
- /usr/local/include/c++/14.2.0/bits/istream.tcc \
- /usr/local/include/c++/14.2.0/bits/codecvt.h \
- /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/basic_file.h \
- /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/c++io.h \
- /usr/local/include/c++/14.2.0/bits/fstream.tcc \
- /usr/local/include/c++/14.2.0/iostream \
- /usr/local/include/c++/14.2.0/algorithm \
- /usr/local/include/c++/14.2.0/bits/stl_algo.h \
- /usr/local/include/c++/14.2.0/bits/algorithmfwd.h \
- /usr/local/include/c++/14.2.0/bits/stl_heap.h \
- /usr/local/include/c++/14.2.0/bits/uniform_int_dist.h \
- /usr/local/include/c++/14.2.0/bits/ranges_algo.h \
- /usr/local/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
- /workspaces/OOP1/lab6/include/elf.h \
- /workspaces/OOP1/lab6/include/knight.h \
- /workspaces/OOP1/lab6/include/visitor.h \
- /workspaces/OOP1/lab6/include/factory.h
+ /workspaces/OOP1/lab6/include/npc.h /usr/local/include/c++/14.2.0/list \
+ /usr/local/include/c++/14.2.0/bits/stl_list.h \
+ /usr/local/include/c++/14.2.0/bits/list.tcc
