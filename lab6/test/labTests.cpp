@@ -45,44 +45,6 @@ TEST(Factory, basic) {
     ASSERT_EQ(out.str(), "Dragon Belthromar {0, 0}Wandering Knight Emilia {1, 1}Elf Dobby {2, 2}");
 }
 
-TEST(Fighting, everybody_dies) {
-    std::vector<std::shared_ptr<NPC>> persons;
-    persons.push_back(factory("Dragon", "Belthromar", 0, 0));
-    persons.push_back(factory("Wandering_Knight", "Emilia", 1, 1));
-    persons.push_back(factory("Elf", "Dobby", 2, 2));
-
-    for (auto& defender : persons) {
-        for (auto& attacker : persons) {
-            defender->accept(attacker.get(), 4);
-        }
-    }
-
-    for (auto& elem : persons) {
-        ASSERT_FALSE(elem->is_alive());
-    }
-}
-
-TEST(Fighting, Dragon_survives) {
-    std::vector<std::shared_ptr<NPC>> persons;
-    persons.push_back(factory("Dragon", "Belthromar", 100, 100));
-    persons.push_back(factory("Wandering_Knight", "Emilia", 1, 1));
-    persons.push_back(factory("Elf", "Dobby", 2, 2));
-
-    for (auto& defender : persons) {
-        for (auto& attacker : persons) {
-            defender->accept(attacker.get(), 4);
-        }
-    }
-
-    for (size_t i = 0; i != persons.size(); ++i) {
-        if (i != 1) {
-            EXPECT_TRUE(persons[i]->is_alive());
-        } else {
-            EXPECT_FALSE(persons[i]->is_alive());
-        }
-    }
-}
-
 std::unique_ptr<NPC> createNPC(const std::string& type, const std::string& name, int x, int y) {
     if (type == "Dragon") {
         return std::make_unique<Dragon>(x, y, name);

@@ -1,1 +1,5 @@
-Dragon Belthromar {2, 3}
+Dragon Belthromar {11, 11}
+Wandering Knight Emilia {1, 1}
+Elf Dobby {12, 12}
+Dragon Alsiel {10, 10}
+Wandering Knight Alice {15, 15}

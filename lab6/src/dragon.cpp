@@ -15,14 +15,14 @@ void Dragon::print(std::ostream& out) {
     out << *this;
 }
 
-void Dragon::accept(NPC* attacker, const int& distance) {
-    if (alive && (dynamic_cast<Wandering_Knight*>(attacker) || (dynamic_cast<Dragon*>(attacker) && attacker != this))) {
-        bool win = is_close(*attacker, distance);
-        if (win)
-            alive = false;
-        notify(attacker, win);
-    }
-}
+// void Dragon::accept(NPC* attacker, const int& distance) {
+//     if (alive && (dynamic_cast<Wandering_Knight*>(attacker) || (dynamic_cast<Dragon*>(attacker) && attacker != this))) {
+//         bool win = is_close(*attacker, distance);
+//         if (win)
+//             alive = false;
+//         notify(attacker, win);
+//     }
+// }
 
 std::ostream& operator<<(std::ostream& out, const Dragon& other) {
     return out << "Dragon " << other.name << " {" << other.x << ", " << other.y << '}';

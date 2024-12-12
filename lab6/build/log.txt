@@ -1,4 +1,2 @@
-KILL: Wandering Knight Emilia {3, 4} was killed by Dragon Belthromar {2, 3}
-KILL: Dragon Belthromar {2, 3} was killed by Elf Dobby {4, 5}
-KILL: Elf Dobby {4, 5} was killed by Dragon Alsiel {10, 10}
-KILL: Dragon Alsiel {10, 10} was killed by Wandering Knight Alice {15, 15}
+KILL: Elf Dobby {12, 12} was killed by Dragon Belthromar {11, 11}
+KILL: Dragon Belthromar {11, 11} was killed by Dragon Alsiel {10, 10}

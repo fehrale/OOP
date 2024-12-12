@@ -23,9 +23,7 @@ class NPC {
 
     virtual void print(std::ostream&) = 0;
 
-    virtual void accept(NPC*, const int&) = 0;
-
-     virtual void accept(const Visitor& visitor, NPC* attacker, const int& distance) = 0;
+    virtual void accept(const Visitor& visitor, NPC* attacker, const int& distance) = 0;
 
     virtual void attach(Observer*);
     virtual void detach(Observer*);

@@ -1,6 +1,6 @@
 #pragma once
-#include "npc.h"
 #include <memory>
+#include "npc.h"
 #include "dragon.h"
 #include "elf.h"
 #include "factory.h"
