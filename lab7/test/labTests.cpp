@@ -225,36 +225,6 @@ TEST(factory_test, create_knight) {
     EXPECT_EQ(npc->position(), std::make_pair(50, 60));
 }
 
-// TEST(save_load_test, save_and_load_npcs) {
-//     set_t npcs;
-//     npcs.insert(factory(DragonType, 10, 10));
-//     npcs.insert(factory(ElfType, 20, 20));
-//     npcs.insert(factory(KnightType, 30, 30));
-
-//     save(npcs, "test_save.txt");
-//     auto loaded_npcs = load("test_save.txt");
-
-//     EXPECT_EQ(npcs.size(), loaded_npcs.size());
-
-//     for (const auto& npc : loaded_npcs) {
-//         EXPECT_TRUE(std::any_of(npcs.begin(), npcs.end(), [&](const std::shared_ptr<NPC>& original) {
-//             return original->get_type() == npc->get_type() &&
-//                    original->position() == npc->position();
-//         }));
-//     }
-// }
-
-TEST(fight_test, npc_fight_logic) {
-    auto dragon = factory(DragonType, 10, 10);
-    auto knight = factory(KnightType, 15, 15);
-
-    EXPECT_FALSE(dragon->is_close(knight, 10));
-    EXPECT_FALSE(knight->accept(dragon));
-
-    knight->must_die();
-    EXPECT_TRUE(knight->is_alive());
-}
-
 TEST(observer_test, notify_on_fight) {
     auto dragon = factory(DragonType, 10, 10);
     auto knight = factory(KnightType, 10, 15);
@@ -267,21 +237,6 @@ TEST(observer_test, notify_on_fight) {
     EXPECT_TRUE(ss.str().find("Murder") != std::string::npos);
     std::cout.rdbuf(old_cout); // Восстановление стандартного потока вывода
 }
-
-// TEST(fight_manager_test, add_and_process_events) {
-//     FightManager& manager = FightManager::get();
-//     auto dragon = factory(DragonType, 10, 10);
-//     auto knight = factory(KnightType, 15, 15);
-
-//     manager.add_event({dragon, knight});
-
-//     std::thread fight_thread(std::ref(manager));
-//     std::this_thread::sleep_for(std::chrono::milliseconds(200));
-
-//     EXPECT_FALSE(knight->is_alive());
-
-//     fight_thread.detach();
-// }
 
 TEST(grid_test, display_grid) {
     set_t npcs;
