@@ -1,7 +1,7 @@
 #include "observer.h"
 #include <iostream>
 #include <mutex>
-#include "npc.h" // Обязательно подключаем типы NPC
+#include "npc.h"
 
 std::shared_ptr<IFightObserver> TextObserver::get() {
     static TextObserver instance;
