@@ -1,0 +1,1 @@
+/usr/local/bin/c++  -Werror=maybe-uninitialized CMakeFiles/tests.dir/test/labTests.cpp.o CMakeFiles/tests.dir/src/dragon.cpp.o CMakeFiles/tests.dir/src/elf.cpp.o CMakeFiles/tests.dir/src/factory.cpp.o CMakeFiles/tests.dir/src/knight.cpp.o CMakeFiles/tests.dir/src/npc.cpp.o CMakeFiles/tests.dir/src/observer.cpp.o -o tests  lib/libgtest.a lib/libgtest_main.a lib/libgtest.a 
