@@ -1,2 +1,0 @@
-KILL: Elf Dobby {12, 12} was killed by Dragon Belthromar {11, 11}
-KILL: Dragon Belthromar {11, 11} was killed by Dragon Alsiel {10, 10}
