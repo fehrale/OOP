@@ -1,7 +1,7 @@
 #pragma once
 
 #include <memory>
-#include "npc.h" // Заголовочный файл с объявлением NPC и IFightObserver
+#include "npc.h" 
 
 class TextObserver : public IFightObserver {
 private:
