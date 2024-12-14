@@ -10,7 +10,6 @@
 #include <shared_mutex>
 #include <string>
 
-// type for npcs
 struct NPC;
 struct Dragon;
 struct Wandering_Knight;
@@ -48,7 +47,6 @@ class NPC {
     virtual bool is_close(const std::shared_ptr<NPC>& other, size_t distance);
 
     virtual bool accept(std::shared_ptr<NPC> visitor) = 0;
-    // visit
     virtual bool fight(std::shared_ptr<Dragon> other) = 0;
     virtual bool fight(std::shared_ptr<Wandering_Knight> other) = 0;
     virtual bool fight(std::shared_ptr<Elf> other) = 0;
