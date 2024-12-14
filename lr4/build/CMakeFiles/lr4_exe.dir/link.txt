@@ -1,1 +1,0 @@
-/usr/local/bin/c++  -Werror=maybe-uninitialized CMakeFiles/lr4_exe.dir/main.cpp.o -o lr4_exe 
