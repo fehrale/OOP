@@ -15,96 +15,6 @@
 using namespace std::chrono_literals;
 std::mutex print_mutex;
 
-// class TextObserver : public IFightObserver {
-//    private:
-//     TextObserver(){};
-
-//    public:
-//     static std::shared_ptr<IFightObserver> get() {
-//         static TextObserver instance;
-//         return std::shared_ptr<IFightObserver>(&instance, [](IFightObserver*) {});
-//     }
-
-//     void on_fight(const std::shared_ptr<NPC> attacker, const std::shared_ptr<NPC> defender, bool win) override {
-//         if (win) {
-//             std::lock_guard<std::mutex> lck(print_mutex);
-//             std::cout << std::endl
-//                       << "Murder --------" << std::endl;
-//             attacker->print();
-//             defender->print();
-//         }
-//     }
-// };
-
-// std::shared_ptr<NPC> factory(std::istream& is) {
-//     std::shared_ptr<NPC> result;
-//     int type{0};
-//     if (is >> type) {
-//         switch (type) {
-//             case DragonType:
-//                 result = std::make_shared<Dragon>(is);
-//                 break;
-//             case KnightType:
-//                 result = std::make_shared<Wandering_Knight>(is);
-//                 break;
-//             case ElfType:
-//                 result = std::make_shared<Elf>(is);
-//                 break;
-//         }
-//     } else
-//         std::cerr << "unexpected NPC type:" << type << std::endl;
-
-//     if (result)
-//         result->subscribe(TextObserver::get());
-
-//     return result;
-// }
-
-// std::shared_ptr<NPC> factory(NpcType type, int x, int y) {
-//     std::shared_ptr<NPC> result;
-//     switch (type) {
-//         case DragonType:
-//             result = std::make_shared<Dragon>(x, y);
-//             break;
-//         case KnightType:
-//             result = std::make_shared<Wandering_Knight>(x, y);
-//             break;
-//         case ElfType:
-//             result = std::make_shared<Elf>(x, y);
-//             break;
-//         default:
-//             break;
-//     }
-//     if (result)
-//         result->subscribe(TextObserver::get());
-
-//     return result;
-// }
-
-// save array to file
-void save(const set_t& array, const std::string& filename) {
-    std::ofstream fs(filename);
-    fs << array.size() << std::endl;
-    for (auto& n : array)
-        n->save(fs);
-    fs.flush();
-    fs.close();
-}
-
-set_t load(const std::string& filename) {
-    set_t result;
-    std::ifstream is(filename);
-    if (is.good() && is.is_open()) {
-        int count;
-        is >> count;
-        for (int i = 0; i < count; ++i)
-            result.insert(factory(is));
-        is.close();
-    } else
-        std::cerr << "Error: " << std::strerror(errno) << std::endl;
-    return result;
-}
-
 std::ostream& operator<<(std::ostream& os, const set_t& array) {
     for (auto& n : array)
         n->print();
@@ -267,12 +177,12 @@ int main() {
         std::this_thread::sleep_for(1s);
     }
 
-    move_thread.detach();  // Завершаем потоки корректно
+    move_thread.detach();
     fight_thread.detach();
 
-    std::cout << "Game over! Dead characters:" << std::endl;
+    std::cout << "Game over! Surviving characters:" << std::endl;
     for (auto npc : array) {
-        if (!npc->is_alive()) {
+        if (npc->is_alive()) { // Проверяем, кто выжил
             npc->print();
         }
     }
